@@ -52,7 +52,7 @@ class Solution:
 
     def minDepth_guangdu(self, root):  # 广度优先
         """
-        一行行找下去，找到第一个叶节点就返回深度
+        一层层找下去，找到第一个叶节点就返回深度
         """
         if not root:  # 若为空节点，返回0
             return 0
