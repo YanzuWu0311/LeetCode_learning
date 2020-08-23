@@ -31,6 +31,11 @@ class Solution:
                     return head
 
     def minDepth_shendu(self, root):
+        """
+        若只有左子树，返回左子树的深度
+        若只有右子树，返回右子树的深度
+        若有俩，返回二者的min
+        """
         if not root:  # 该节点为空
             return 0
 
@@ -46,6 +51,9 @@ class Solution:
         return min_depth + 1
 
     def minDepth_guangdu(self, root):  # 广度优先
+        """
+        一行行找下去，找到第一个叶节点就返回深度
+        """
         if not root:  # 若为空节点，返回0
             return 0
 
@@ -63,7 +71,7 @@ class Solution:
         return 0
 
 
-nodelist = [1, 2, None, 3, None, 4, None, 5]
+nodelist = [3, 9, 20, None, None, 15, 7]
 Solution_minDepth = Solution()
 root = Solution_minDepth.creatTree(nodelist)
-print(Solution_minDepth.minDepth_shendu(root))
+print(Solution_minDepth.minDepth_guangdu(root))
