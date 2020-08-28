@@ -1,3 +1,6 @@
+"""
+用深度优先和广度优先做
+"""
 # Definition for a binary tree node.
 import collections
 
